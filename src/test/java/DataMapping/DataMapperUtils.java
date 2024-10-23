@@ -43,6 +43,29 @@ public class DataMapperUtils {
         headerRow.createCell(13).setCellValue("srcnode_cash_requested");
         headerRow.createCell(14).setCellValue("CUR_RECON_ACQ_1");
         headerRow.createCell(15).setCellValue("srcnode_currency_code");
+
+        headerRow.createCell(16).setCellValue("CNV_RCN_ACQ_RATE");
+        headerRow.createCell(17).setCellValue("srcnode_conversion_rate");
+
+        headerRow.createCell(18).setCellValue("CNV_RCN_ACQ_DE_POS");
+        headerRow.createCell(19).setCellValue("srcnode_conversion_rate");
+
+        headerRow.createCell(20).setCellValue("DATE_CNV_ACQ");
+        headerRow.createCell(21).setCellValue("srcnode_date_conversion");
+
+        headerRow.createCell(22).setCellValue("ODE_MTI");
+        headerRow.createCell(23).setCellValue("srcnode_original_data");
+
+        headerRow.createCell(24).setCellValue("ODE_SYS_TRA_AUD_NO");
+        headerRow.createCell(25).setCellValue("srcnode_original_data");
+
+        headerRow.createCell(26).setCellValue("ODE_TSTAMP_LOCL_TR");
+        headerRow.createCell(27).setCellValue("srcnode_original_data");
+
+        headerRow.createCell(26).setCellValue("ODE_INST_ID_ACQ");
+        headerRow.createCell(27).setCellValue("srcnode_original_data");
+
+
     }
 
     // Processes the Realtime_Data sheet, matching transactions with DN_Data and writing results to the output sheet
@@ -78,6 +101,11 @@ public class DataMapperUtils {
         outputRow.createCell(13).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("srcnode_cash_requested")))); // srcnode_cash_requested from Realtime_Data
         outputRow.createCell(14).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("CUR_RECON_ACQ_1")))); // CUR_RECON_ACQ_1 from DN_Data
         outputRow.createCell(15).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("srcnode_currency_code")))); // srcnode_currency_code from Realtime_Data
+        outputRow.createCell(16).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("CNV_RCN_ACQ_RATE")))); // CNV_RCN_ACQ_RATE" from DN_Data
+        outputRow.createCell(17).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("srcnode_conversion_rate")))); // srcnode_conversion_rate from Realtime_Data
+        outputRow.createCell(18).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("CNV_RCN_ACQ_DE_POS")))); // CNV_RCN_ACQ_RATE" from DN_Data
+        outputRow.createCell(19).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("srcnode_conversion_rate")))); // srcnode_conversion_rate from Realtime_Data
+
     }
 
     // Helper method to get the value of a cell as a String

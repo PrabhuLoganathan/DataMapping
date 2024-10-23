@@ -14,8 +14,8 @@ public class DataValidation {
 
         DataValidatorUtils.initializeValidMtiMsgTypeMap();
 
-        String inputFilePath = "/Users/prabhuloganathan/Downloads/DataMap/mappedDataSheet.xlsx";
-        String outputFilePath = "/Users/prabhuloganathan/Downloads/DataMap/mappedDataSheet.xlsx"; // Use the same file
+        String inputFilePath = "/Users/prabhuloganathan/IdeaProjects/DataMapping/src/test/testData/mappedDataSheet.xlsx";
+        String outputFilePath = "/Users/prabhuloganathan/IdeaProjects/DataMapping/src/test/testData/mappedDataSheet.xlsx"; // Use the same file
 
         try (FileInputStream fis = new FileInputStream(inputFilePath);
              Workbook workbook = new XSSFWorkbook(fis)) {

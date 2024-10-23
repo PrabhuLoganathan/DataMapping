@@ -13,9 +13,9 @@ public class DN_RT_DataMapper {
 
     public static void main(String[] args) throws IOException {
         // Input file paths
-        String sheet1Path = "/Users/prabhuloganathan/Downloads/DataMap/DATA NAVIGATOR-2.xlsx";
-        String sheet2Path = "/Users/prabhuloganathan/Downloads/DataMap/Realtime-2.xlsx";
-        String outputPath = "/Users/prabhuloganathan/Downloads/DataMap/mappedDataSheet.xlsx";
+        String sheet1Path = "/Users/prabhuloganathan/IdeaProjects/DataMapping/src/test/testData/DATA NAVIGATOR-3.xlsx";
+        String sheet2Path = "/Users/prabhuloganathan/IdeaProjects/DataMapping/src/test/testData/Realtime-3.xlsx";
+        String outputPath = "/Users/prabhuloganathan/IdeaProjects/DataMapping/src/test/testData/mappedDataSheet.xlsx";
 
         // Create a new workbook for the output file
         Workbook outputWorkbook = new XSSFWorkbook();

@@ -139,8 +139,10 @@ public class DataValidatorUtils {
 
     // Method to compare DATE_RECON_ACQ (YYYYMMDD) and srcnode_date_settle (MMDD)
     public static boolean compareDatesWithYearIgnored(String dateReconAcq, String srcnodeDateSettle) {
-        if (dateReconAcq.length() >= 8 && srcnodeDateSettle.length() == 4) {
-            String dateReconAcqMMDD = dateReconAcq.substring(4); // Get MMDD from YYYYMMDD
+        if (dateReconAcq.length() >= 8 && srcnodeDateSettle.length() == 3) {
+            String dateReconAcqMMDD = dateReconAcq.substring(5); // Get MMDD from YYYYMMDD
+            System.out.println(dateReconAcqMMDD);
+            System.out.println(srcnodeDateSettle);
             return dateReconAcqMMDD.equals(srcnodeDateSettle); // Compare MMDD
         }
         return false;
