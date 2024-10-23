@@ -164,16 +164,14 @@ public class DataMapperUtils {
         outputRow.createCell(3).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("TRAN_NUMBER")))); // TRAN_NUMBER from DN_Data
         outputRow.createCell(4).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("tran_nr")))); // tran_nr from Realtime_Data
         outputRow.createCell(5).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("TRAN_DESC")))); // TRAN_DESC from Realtime_Data
-        outputRow.createCell(6).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("DRAFT_CAPTURE_FLG")))); // Draft Capture from DN_Data
-        outputRow.createCell(7).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("draft_capture")))); // Draft Capture from Realtime_Data
+        outputRow.createCell(6).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("DRAFT_CAPTURE_FLG")))); // DRAFT_CAPTURE_FLG from DN_Data
+        outputRow.createCell(7).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("draft_capture")))); // DRAFT_CAPTURE_FLG_RT from Realtime_Data
         outputRow.createCell(8).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("stan_in")))); // stan_in from Realtime_Data
         outputRow.createCell(9).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("STANDIN_ACT")))); // STANDIN_ACT from DN_Data
         outputRow.createCell(10).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("DATE_RECON_ACQ")))); // DATE_RECON_ACQ from DN_Data
         outputRow.createCell(11).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("srcnode_date_settle")))); // srcnode_date_settle from Realtime_Data
         outputRow.createCell(12).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("ADL_RQST_AMT1")))); // ADL_RQST_AMT1 from DN_Data
         outputRow.createCell(13).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("srcnode_cash_requested")))); // srcnode_cash_requested from Realtime_Data
-
-        // Additional fields
         outputRow.createCell(14).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("CUR_RECON_ACQ_1")))); // CUR_RECON_ACQ_1 from DN_Data
         outputRow.createCell(15).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("srcnode_currency_code")))); // srcnode_currency_code from Realtime_Data
         outputRow.createCell(16).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("CNV_RCN_ACQ_RATE")))); // CNV_RCN_ACQ_RATE from DN_Data
@@ -183,28 +181,23 @@ public class DataMapperUtils {
         outputRow.createCell(20).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("ODE_MTI")))); // ODE_MTI from DN_Data
         outputRow.createCell(21).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("ODE_SYS_TRA_AUD_NO")))); // ODE_SYS_TRA_AUD_NO from DN_Data
         outputRow.createCell(22).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("srcnode_original_data")))); // srcnode_original_data from Realtime_Data
-        outputRow.createCell(23).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("snknode_req_sys_trace")))); // snknode_req_sys_trace from DN_Data
-        outputRow.createCell(24).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("SYS_TRACE_AUDIT_NO")))); // SYS_TRACE_AUDIT_NO from Realtime_Data
-
-        // Continue for remaining fields...
+        outputRow.createCell(23).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("snknode_req_sys_trace")))); // snknode_req_sys_trace from Realtime_Data
+        outputRow.createCell(24).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("SYS_TRACE_AUDIT_NO")))); // SYS_TRACE_AUDIT_NO from DN_Data
         outputRow.createCell(25).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("TRAN_DESC")))); // TRAN_DESC from DN_Data
         outputRow.createCell(26).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("DATE_RECON_ISS")))); // DATE_RECON_ISS from Realtime_Data
         outputRow.createCell(27).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("DATE_RECON_NET")))); // DATE_RECON_NET from Realtime_Data
         outputRow.createCell(28).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("AMT_RECON_ISS")))); // AMT_RECON_ISS from DN_Data
-        outputRow.createCell(29).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("AMT_RECON_NET")))); // AMT_RECON_NET from Realtime_Data
+        outputRow.createCell(29).setCellValue(getCellValueAsString(rtDataRow.getCell(dnColumnMap.get("AMT_RECON_NET")))); // AMT_RECON_NET from Realtime_Data
         outputRow.createCell(30).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("O_AMT_CARD_BILL")))); // O_AMT_CARD_BILL from DN_Data
-
-        outputRow.createCell(31).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("O_AMT_RECON_ISS")))); // O_AMT_RECON_ISS from Realtime_Data
-        outputRow.createCell(32).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("snknode_cash_requested")))); // snknode_cash_requested from Realtime_Data
-        outputRow.createCell(33).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("ADL_RESP_AMT1")))); // ADL_RESP_AMT1 from Realtime_Data
-
+       // outputRow.createCell(31).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("O_AMT_RECON_ISS")))); // O_AMT_RECON_ISS from DN_Data
+       // outputRow.createCell(32).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("snknode_cash_requested")))); // snknode_cash_requested from Realtime_Data
+       // outputRow.createCell(33).setCellValue(getCellValueAsString(rtDataRow.getCell(rtColumnMap.get("ADL_RESP_AMT1")))); // ADL_RESP_AMT1 from Realtime_Data
         outputRow.createCell(34).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("CUR_RECON_ISS")))); // CUR_RECON_ISS from DN_Data
         outputRow.createCell(35).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("CUR_RECON_NET")))); // CUR_RECON_NET from Realtime_Data
         outputRow.createCell(36).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("CUR_CARD_BILL")))); // CUR_CARD_BILL from Realtime_Data
         outputRow.createCell(37).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("CNV_RCN_ISS_RATE")))); // CNV_RCN_ISS_RATE from Realtime_Data
         outputRow.createCell(38).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("DATE_CNV_ISS")))); // DATE_CNV_ISS from Realtime_Data
         outputRow.createCell(39).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("INST_ID_RECON_ISS")))); // INST_ID_RECON_ISS from DN_Data
-
         outputRow.createCell(40).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("TRAN_TYPE_ID")))); // TRAN_TYPE_ID from Realtime_Data
         outputRow.createCell(41).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("AMT_TRAN")))); // AMT_TRAN from Realtime_Data
         outputRow.createCell(42).setCellValue(getCellValueAsString(dnDataRow.getCell(dnColumnMap.get("O_AMT_TRAN")))); // O_AMT_TRAN from Realtime_Data
