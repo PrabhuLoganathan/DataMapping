@@ -1,0 +1,78 @@
+package DataMapping;
+public enum RTDataColumns {
+    IN_REQ("in_req"),
+    IN_ADV("in_adv"),
+    IN_REV("IN_REV"),
+    MSG_TYPE("msg_type"),
+    TRAN_NR("tran_nr"),
+    TOTAL_PROCESSING("total_processing"),
+    STATE("state"),
+    MSG_CLASS("msg_class"),
+    DRAFT_CAPTURE("draft_capture"),
+    STAN_IN("stan_in"),
+    SOURCE_NODE("source_node"),
+    SRCNODE_KEY("srcnode_key"),
+    SRCNODE_SYS_TRACE("srcnode_sys_trace"),
+    SRCNODE_SETTLE_ENTITY("srcnode_settle_entity"),
+    SRCNODE_BATCH("srcnode_batch"),
+    SRCNODE_BATCH_EXCEPTION("srcnode_batch_exception"),
+    SRCNODE_DATE_SETTLE("srcnode_date_settle"),
+    SRCNODE_AMOUNT_REQUESTED("srcnode_amount_requested"),
+    SRCNODE_AMOUNT_APPROVED("srcnode_amount_approved"),
+    SRCNODE_AMOUNT_FINAL("srcnode_amount_final"),
+    SRCNODE_CASH_REQUESTED("srcnode_cash_requested"),
+    SRCNODE_CASH_APPROVED("srcnode_cash_approved"),
+    SRCNODE_CASH_FINAL("srcnode_cash_final"),
+    SRCNODE_FEE("srcnode_fee"),
+    SRCNODE_FEE_PROC("srcnode_fee_proc"),
+    SRCNODE_CURRENCY_CODE("srcnode_currency_code"),
+    SRCNODE_CONVERSION_RATE("srcnode_conversion_rate"),
+    SRCNODE_DATE_CONVERSION("srcnode_date_conversion"),
+    SRCNODE_ORIGINAL_DATA("srcnode_original_data"),
+    SRCNODE_ECHO_DATA("srcnode_echo_data"),
+    SRCNODE_ADDITIONAL_DATA("srcnode_additional_data"),
+    SINK_NODE("sink_node"),
+    SNKNODE_REQ_SYS_TRACE("snknode_req_sys_trace"),
+    SNKNODE_REV_SYS_TRACE("snknode_rev_sys_trace"),
+    SNKNODE_ADV_SYS_TRACE("snknode_adv_sys_trace"),
+    SNKNODE_SETTLE_ENTITY("snknode_settle_entity"),
+    SNKNODE_BATCH("snknode_batch"),
+    SNKNODE_BATCH_EXCEPTION("snknode_bach_exception"),
+    SNKNODE_DATE_SETTLE("snknode_date_settle"),
+    SNKNODE_AMOUNT_REQUESTED("snknode_amount_requested"),
+    SNKNODE_AMOUNT_APPROVED("snknode_amount_approved"),
+    SNKNODE_AMOUNT_FINAL("snknode_amount_final"),
+    SNKNODE_FEE("snknode_fee"),
+    SNKNODE_FEE_PROC("snknode_fee_proc"),
+    SNKNODE_CURRENCY_CODE("snknode_currency_code"),
+    SNKNODE_CONVERSION_RATE("snknode_conversion_rate"),
+    SNKNODE_DATE_CONVERSION("snknode_date_conversion"),
+    SNKNODE_ORIGINAL_DATA("snknode_original_data"),
+    SNKNODE_ECHO_DATA("snknode_echo_data"),
+    CONTROL_NODE("control_node"),
+    TOTAL_GROUP("total_group"),
+    PAN("pan"),
+    TRAN_TYPE("tran_type"),
+    FROM_ACCOUNT("from_account"),
+    TO_ACCOUNT("to_account"),
+    AMOUNT_TRAN_REQUESTED("amount_tran_requested"),
+    AMOUNT_TRAN_APPROVED("amount_tran_approved"),
+    AMOUNT_TRAN_FINAL("amount_tran_final"),
+    AMOUNT_CASH_REQUESTED("amount_cash_requested"),
+    AMOUNT_CASH_APPROVED("amount_cash_approved"),
+    AMOUNT_CASH_FINAL("amount_cash_final"),
+    GMT_DATE_TIME("gmt_date_time"),
+    TIME_LOCAL("time_local_"),
+    DATE_LOCAL("date_local"),
+    EXPIRY_DATE("expiry_date");
+
+    private final String columnName;
+
+    RTDataColumns(String columnName) {
+        this.columnName = columnName;
+    }
+
+    public String getColumnName() {
+        return columnName;
+    }
+}
