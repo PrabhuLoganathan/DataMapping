@@ -42,8 +42,8 @@ public class DataValidation {
                 } else {
                     Row outputRow = outputSheet.createRow(rowNum);  // Create corresponding row in the output sheet
 
-                    // Copy original row values
-                    // DataValidatorUtils.copyRowValues(outputRow, row);
+
+                     //DataValidatorUtils.copyRowValues(outputRow, row);
 
                     int lastCellIndex = 0;
 
