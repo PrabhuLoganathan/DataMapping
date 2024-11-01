@@ -383,7 +383,7 @@ public class DataValidatorUtils {
         return decryptedPan != null && decryptedPan.equals(pan);
     }
 
-    
+
     // Validation 41: Checks if Secure_3d_result is null and CAVV_RESULT is empty
     public static boolean validateSecure3DAndCAVVResult(String secure3dResult, String cavvResult) {
         return secure3dResult == null && (cavvResult == null || cavvResult.isEmpty());
