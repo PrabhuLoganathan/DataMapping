@@ -52,26 +52,10 @@ public class DataValidatorUtils {
 
     public static void copyHeaderRow(Sheet outputSheet, Row headerRow) {
         Row outputHeaderRow = outputSheet.createRow(0);
-        for (int i = 0; i < headerRow.getPhysicalNumberOfCells(); i++) {
-            Cell inputCell = headerRow.getCell(i);
-            Cell outputCell = outputHeaderRow.createCell(i);
-            if (inputCell != null) {
-                //outputCell.setCellValue(inputCell.getStringCellValue());
-            }
+        int colIndex = 0;
+        for (int i = 1; i <= 70; i++) {
+            outputHeaderRow.createCell(colIndex++).setCellValue("Validation " + i);
         }
-
-//        int colIndex = headerRow.getPhysicalNumberOfCells();
-        int colIndex =0;
-
-        outputHeaderRow.createCell(colIndex++).setCellValue("msg_type and MTI validation");
-        outputHeaderRow.createCell(colIndex++).setCellValue("Function Code");
-        outputHeaderRow.createCell(colIndex++).setCellValue("Draft Capture Validation");
-        outputHeaderRow.createCell(colIndex++).setCellValue("Validate_StanIn_StandinAct");
-        outputHeaderRow.createCell(colIndex++).setCellValue("Validate_DATE_RECON_ACQ_srcnode_date_settle");
-        outputHeaderRow.createCell(colIndex++).setCellValue("Validate_ADL_RQST_AMT1_srcnode_cash_requested");
-        outputHeaderRow.createCell(colIndex++).setCellValue("Validate_CUR_RECON_ACQ_1_srcnode_currency_code");
-        outputHeaderRow.createCell(colIndex++).setCellValue("Validate_Conversion_Rates");
-        outputHeaderRow.createCell(colIndex).setCellValue("Validate_O_AMT_RECON_ACQ_snknode_amount_requested");
     }
 
     public static boolean isValidMtiMsgType(String msgType, String mti) {
